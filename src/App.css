@@ -3,6 +3,12 @@ body {
  background-size: 30%;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   width: 80%;
   margin: 0 auto;
@@ -15,18 +21,30 @@ body {
 
 .beanie-baby {
   margin: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.beanie-baby .beanie-img {
+.beanie-div{
+  border: 1px solid hotpink;
+  padding: 20px;
+  width: 250px;
+}
+
+.beanie-div .beanie-img {
   width: 200px;
+  object-fit: contain;
 }
 
 .beanies {
-  text-align: center;
+  text-align: left;
+  flex-direction: column;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .beanie-detail {
@@ -53,4 +71,8 @@ body {
   border-radius: 20px;
   margin: 10px;
   padding: 20px;
+}
+
+h3{
+  margin-top: 10px;
 }

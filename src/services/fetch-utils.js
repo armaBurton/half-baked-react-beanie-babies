@@ -5,6 +5,7 @@ export async function getBeanieBabies(from = 0, to = 30) {
     .from('beanie_babies')
     .select()
     .range(from, to);
+  console.log(response);
 
   return checkError(response);
 }
