@@ -38,7 +38,3 @@ export default function BeanieDetail() {
     </Link>
   );
 }
-
-
-
-

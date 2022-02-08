@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 
-
 export default function BeanieBaby(beanieBaby) {
   return (
     <Link to={`/beanie-baby/${beanieBaby.bean.id}`}>

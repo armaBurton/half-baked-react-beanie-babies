@@ -1,7 +1,6 @@
 import './App.css';
 import BeanieBaby from './BeanieBaby';
 
-
 export default function BeaniesList({ beanieBabies }) {
   return (
     <div className='beanie-baby'>
