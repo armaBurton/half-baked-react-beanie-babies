@@ -4,6 +4,8 @@ import { getBeanieBabies } from './services/fetch-utils';
 import BeaniesList from './BeaniesList';
 
 function App() {
+  const [query, setQuery] = useState('');
+  const [search, setSearch] = useState('');
   const [beanieBabies, setBeanieBabies] = useState([]);
   const [page, setPage] = useState(1);
   const perPage = 40;
@@ -12,18 +14,27 @@ function App() {
     async function fetch() {
       const from = page * perPage - perPage;
       const to = page * perPage;
-      const beanies = await getBeanieBabies(from, to);
+      const beanies = await getBeanieBabies(from, to, search);
 
       setBeanieBabies(beanies);
     }
 
     fetch();
-  }, [page]); // what can you do with this array to trigger a fetch every time the page changes?
+  }, [page, search]); // what can you do with this array to trigger a fetch every time the page changes?
 
+  function handleSearch(e){
+    e.preventDefault();
+    setSearch(query);
+  }
 
   return (
     <>
       <h2>Current Page {page}</h2>
+      <form onSubmit={handleSearch}>
+        <h3>search</h3>
+        <input type="text" onChange={(e) => setQuery(e.target.value)} />
+        <button type='submit'>search</button>
+      </form>
       <div className='buttons'>
         {/* on click, this button should decrement the page in state  */}
         {/* also, disable this button when you are on the first page */}
