@@ -36,14 +36,13 @@ export default function App() {
         </ul>
 
         <Switch>
-          <Route>
-            <Route exact path='/'>
-              <BeaniesPage />
-            </Route>
+          <Route exact path='/'>
+            <BeaniesPage />
           </Route>
-          <Route> 
-            {/* this route should point to a particular beanie baby by id and render that specific BeanieDetail page */}
+          <Route exact path="/beanie-baby/:id">
+            <BeanieDetail />
           </Route>
+          {/* this route should point to a particular beanie baby by id and render that specific BeanieDetail page */}
         </Switch>
       </div>
     </Router>
