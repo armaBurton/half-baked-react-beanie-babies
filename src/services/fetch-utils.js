@@ -15,7 +15,6 @@ export async function getSingleBeanie(id) {
     .select()
     .match({ id })
     .single();
-  console.log(response);
 
   return checkError(response);
 
