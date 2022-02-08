@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getSingleBeanie } from './services/fetch-utils';
 import './App.css';
-import BeanieBaby from './BeanieBaby';
 
 export default function BeanieDetail() {
 
