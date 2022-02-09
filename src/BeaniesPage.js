@@ -20,7 +20,7 @@ function App() {
     }
 
     fetch();
-  }, [page, search]); // what can you do with this array to trigger a fetch every time the page changes?
+  }, [page, search]); 
 
   function handleSearch(e){
     e.preventDefault();
